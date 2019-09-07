@@ -19,8 +19,9 @@ class ListCreateImagesView(generics.ListCreateAPIView):
     @validate_request_data
     def post(self, request, *args, **kwargs):
         an_image = Images.objects.create(
-            english_definition=request.data["title"],
-            foreign_definition=request.data["artist"]
+            english_definition=request.data["english_definition"],
+            foreign_definition=request.data["foreign_definition"],
+            foreign_language=request.data["foreign_language"]
         )
         return Response(
             data=ImagesSerializer(an_image).data,

@@ -26,7 +26,7 @@ SECRET_KEY = '1(!@e_gt+*upb-kw0ghbdj+bry2=+n@mx!r(+ia%eydrn145j8'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["3501b435.ngrok.io", 'localhost', '127.0.0.1']
 
 CORS_ORIGIN_ALLOW_ALL = True
 
@@ -110,9 +110,8 @@ REST_FRAMEWORK = {
     # that corresponds to the version requested in the incoming client request.
     'DEFAULT_VERSIONING_CLASS': 'rest_framework.versioning.URLPathVersioning',
     # Permission settings
-    'DEFAULT_PERMISSION_CLASSES': [
-        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
-    ],
+    'DEFAULT_PERMISSION_CLASSES': [],
+    'DEFAULT_AUTHENTICATION_CLASSES': [],
 }
 
 JWT_AUTH = {

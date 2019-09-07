@@ -6,6 +6,7 @@ from django.db import models
 class Images(models.Model):
     english_definition = models.CharField(max_length=255, null=False)
     foreign_definition = models.CharField(max_length=255, null=False)
+    foreign_language = models.CharField(max_length=255, null=False)
 
     def __str__(self):
-        return "English definition: {}. Foreign language definition: {}".format(self.english_definition, self.foreign_definition)
+        return "English definition: {}. Foreign language definition: {}. Foreign language: ".format(self.english_definition, self.foreign_definition, self.foreign_language)

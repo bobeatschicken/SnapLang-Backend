@@ -1,4 +1,5 @@
 # PennApps2020
+This is the backend for the SnapLang Project
 
 ### Installing
 ```

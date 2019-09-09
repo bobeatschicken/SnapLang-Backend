@@ -3,7 +3,7 @@ This is the backend for the SnapLang Project
 
 First, make sure you are in the working directory of your Django project. Then, follow these directions:
 
-### Installing
+### Installing all dependencies
 ```
 pip install -r requirements.txt
 ```
